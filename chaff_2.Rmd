@@ -1,0 +1,44 @@
+---
+title: "main.Rmd"
+author: "Dominic Munns"
+date: "04/11/2020"
+output: 
+  bookdown::pdf_document2: default
+  bookdown::word_document2: default
+  bookdwon::html_document2: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,
+                      warning = FALSE,
+                      message = FALSE,
+                      fig.retina = 3)
+# default code
+```
+```{r packages}
+library(tidyverse)
+# code for package loading
+
+```
+#Introduction
+This is my introduction.
+
+#Methods
+Some interesting techniques.
+
+#Results
+
+
+#Discussion
+
+```{r import}
+#import dataset
+chaff <- read.table("raw_data/chaff.txt", header = TRUE)
+
+```
+```{r tidy}
+#tidy data
+library(tidyverse)
+chaff2 <- gather(chaff, key = sex, mass)
+```
+
