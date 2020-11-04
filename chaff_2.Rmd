@@ -41,4 +41,19 @@ chaff <- read.table("raw_data/chaff.txt", header = TRUE)
 library(tidyverse)
 chaff2 <- gather(chaff, key = sex, mass)
 ```
+```{r SS(x)}
+sum_sq <- function(df, measure, group) {
+  df %>% group_by({{ group }}) %>% 
+    summarise(ss = sum(({{measure}} - mean({{measure}}))^2))
+}
+
+sum_sq(chaff2, mass, sex)
+```
+
+```{r summary}
+chaffsum <- chaff2 %>% 
+  group_by(sex) %>% 
+  summarise(mean_chaff = mean(mass),
+            n = length(mass))
+```
 
