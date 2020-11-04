@@ -54,7 +54,9 @@ sum_sq(chaff2, mass, sex)
 chaffsum <- chaff2 %>% 
   group_by(sex) %>% 
   summarise(mean_chaff = mean(mass),
-            n = length(mass))
+            sd_chaff = sd(mass),
+            se_chaff = sd(mass)/sqrt(length(mass)),
+            sample_size = length(mass))
 # summarise data
 ```
 
