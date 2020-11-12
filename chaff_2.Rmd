@@ -6,7 +6,7 @@ output:
   bookdown::html_document2: default
   bookdown::word_document2: default
   bookdown::pdf_document2: default
-bibliography:: references.bib
+bibliography: references.bib
 ---
 
 ```{r setup, include=FALSE}
@@ -23,19 +23,26 @@ knitr::opts_chunk$set(echo = FALSE,
 #install.packages("gt")
 #install.packages("devtools")
 
-#library(tidyverse)
-#library(rmarkdown)
+library(tidyverse)
+library(rmarkdown)
 
 # install RefManageR and citr from github
-#devtools::install_github("ropensci/RefManageR")
-#devtools::install_github("crsh/citr")
+devtools::install_github("ropensci/RefManageR")
+devtools::install_github("crsh/citr")
+
+library(RefManageR)
+library(citr)
 # code for package loading
 
 
 
 ```
 #Introduction
-Chaffinches are very abundant in Britain, it's pattern helps it to blend into the environment when it is feeding on the ground [@Slater1979-if]. The wingspan of a chaffinch is 24.5-28.5cm and the mass is 18-29 grams [@Marler1956-od]. Males (see figure \@ref(fig:chaffmale-fig)) and females (see figure \@ref(fig:chafffemale-fig)) have different appearances
+Chaffinches are very abundant in Britain, it's pattern helps it to blend into the environment when it is feeding on the ground [@Slater_1979]. The wingspan of a chaffinch is 24.5-28.5cm and the mass is 18-29 grams [@Marler_1956]. Males (see figure \@ref(fig:chaffmale-fig)) and females (see figure \@ref(fig:chafffemale-fig)) have different appearances.
+
+(ref:chaffmale-fig) Male Chaffinch on a branch. By Photo © Andreas Trepte, CC BY-SA 2.5, 
+https://en.wikipedia.org/wiki/Common_chaffinch)
+(ref:weddell-fig) Female Chaffinch on a branch. By Photo © Andreas, CC BY-SA 2.5, https://en.wikipedia.org/wiki/Common_chaffinch)
 
 ```{r chaffmale-fig, out.height="200px", fig.cap='(ref:chaffmale-fig)'}
 knitr::include_graphics("pics/Chaffinch_male.jpg")
