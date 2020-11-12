@@ -1,11 +1,12 @@
 ---
-title: "main.Rmd"
+title: "Chaffinch"
 author: "Dominic Munns"
 date: "04/11/2020"
 output: 
-  bookdown::html_document2: default
-  bookdown::word_document2: default
   bookdown::pdf_document2: default
+  bookdown::word_document2: default
+  bookdown::html_document2: default
+bibliography:: references.bib
 ---
 
 ```{r setup, include=FALSE}
@@ -16,12 +17,25 @@ knitr::opts_chunk$set(echo = FALSE,
 # default code
 ```
 ```{r packages}
+# install packages
+install.packages("kableExtra")
+install.packages("flextable")
+install.packages("gt")
+install.packages("devtools")
+
 library(tidyverse)
+library(rmarkdown)
+
+# install RefManageR and citr from github
+devtools::install_github("ropensci/RefManageR")
+devtools::install_github("crsh/citr")
 # code for package loading
+
+
 
 ```
 #Introduction
-This is my introduction.
+Chaffinches are very abundant in Britain, it's pattern helps it to blend into the environment when it is feeding on the ground [@Slater1979-if]. The wingspan of a chaffinch is 24.5-28.5cm and the mass is 18-29 grams [@Marler1956-od].
 
 #Methods
 Some interesting techniques.
