@@ -37,7 +37,8 @@ library(citr)
 
 
 ```
-#Introduction
+# Introduction
+
 Chaffinches are very abundant in Britain, it's pattern helps it to blend into the environment when it is feeding on the ground [@Slater_1979]. The wingspan of a chaffinch is 24.5-28.5cm and the mass is 18-29 grams [@Marler_1956]. Males (see figure \@ref(fig:chaffmale-fig)) and females (see figure \@ref(fig:chafffemale-fig)) have different appearances.
 
 (ref:chaffmale-fig) Male Chaffinch on a branch. By Photo © Andreas Trepte, CC BY-SA 2.5, https://en.wikipedia.org/wiki/Common_chaffinch
@@ -52,17 +53,7 @@ knitr::include_graphics("pics/Chaffinch_male.jpg")
 knitr::include_graphics("pics/Chaffinch_female.jpg")
 ```
 
-#Methods
-Some interesting techniques.
-
-#Results
-
-
-#Discussion
-
-
-#Bibliography 
-
+# Methods
 
 ```{r import}
 #import dataset
@@ -92,4 +83,15 @@ chaffsum <- chaff2 %>%
             sample_size = length(mass))
 # summarise data
 ```
+We measured the mass of male and female chaffinches.
+We used R [@R-core] with tidyverse packages [@tidyverse] for all analyses and the rmarkdown [@markdown1] and bookdown [@bookdown] packages for manuscript preparation.
 
+
+# Results
+
+
+
+# Discussion
+
+
+# Bibliography 
