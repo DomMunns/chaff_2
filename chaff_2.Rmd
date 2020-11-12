@@ -3,9 +3,9 @@ title: "main.Rmd"
 author: "Dominic Munns"
 date: "04/11/2020"
 output: 
-  bookdown::pdf_document2: default
+  bookdown::html_document2: default
   bookdown::word_document2: default
-  bookdwon::html_document2: default
+  bookdown::pdf_document2: default
 ---
 
 ```{r setup, include=FALSE}
